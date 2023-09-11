@@ -1,0 +1,11 @@
+.root {
+    grid-template-columns: repeat(3, 1fr);
+    overflow-y: auto;
+    gap: 9px 16px;
+    padding: 16px;
+    position: fixed;
+    background: rgb(255, 106, 81);
+    width: 100%;
+    height: 100%;
+    display: grid;
+}

@@ -1,0 +1,20 @@
+.root {
+  gap: 10px;
+  display: grid;
+  width: 1000px;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  align-items: start;
+}
+.grid-element {
+  width: auto;
+  background-color: #e97878;
+  gap: 20px;
+  display: flex;
+  grid-template-rows: 1fr 1fr 1fr;
+  height: 160px;
+  flex-direction: column;
+}
+.prgrp {
+  width: 300px;
+}

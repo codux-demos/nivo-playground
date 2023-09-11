@@ -1,59 +1,45 @@
 import { useState } from 'react';
-import classNames from 'classnames';
-import { ReactComponent as ReactLogo } from './assets/react.svg';
-import { ReactComponent as ViteLogo } from './assets/vite.svg';
-import { ReactComponent as TypescriptLogo } from './assets/typescript.svg';
-import { ReactComponent as ScssLogo } from './assets/scss.svg';
 import styles from './App.module.scss';
+import { ResponsiveChord } from '@nivo/chord';
 
+const data = [
+    [71, 456, 895, 97, 290],
+    [1873, 419, 83, 357, 896],
+    [58, 298, 444, 200, 97],
+    [317, 133, 330, 366, 97],
+    [34, 59, 268, 104, 102],
+];
 function App() {
     const [count, setCount] = useState(0);
 
     return (
         <div className={styles.App}>
-            <div>
-                <a href="https://vitejs.dev" target="_blank">
-                    <ViteLogo
-                        height="6em"
-                        width="6em"
-                        className={classNames(styles.logo)}
-                        title="Vite logo"
-                    />
-                </a>
-                <a href="https://reactjs.org" target="_blank">
-                    <ReactLogo
-                        height="6em"
-                        width="6em"
-                        className={classNames(styles.logo, styles.react)}
-                        title="React logo"
-                    />
-                </a>
-                <a href="https://www.typescriptlang.org/" target="_blank">
-                    <TypescriptLogo
-                        height="6em"
-                        width="6em"
-                        className={classNames(styles.logo, styles.ts)}
-                        title="Typescript logo"
-                    />
-                </a>
-                <a href="https://sass-lang.com/" target="_blank">
-                    <ScssLogo
-                        height="6em"
-                        width="6em"
-                        className={classNames(styles.logo, styles.scss)}
-                        title="SCSS logo"
-                    />
-                </a>
-            </div>
-            <div className={styles.card}>
-                <button onClick={() => setCount((count) => count + 1)}>count is {count}</button>
-                <p>
-                    Edit <code>src/App.tsx</code> and save to test HMR
-                </p>
-            </div>
-            <p className={styles['read-the-docs']}>
-                Click on the Vite and React logos to learn more
-            </p>
+            <ResponsiveChord
+                data={data}
+                keys={['John', 'Raoul', 'Jane', 'Marcel', 'Ibrahim']}
+                valueFormat=".2f"
+                padAngle={0.02}
+                innerRadiusRatio={0.96}
+                innerRadiusOffset={0.02}
+                inactiveArcOpacity={0.25}
+                arcBorderColor={{
+                    from: 'color',
+                    modifiers: [['darker', 0.6]],
+                }}
+                activeRibbonOpacity={0.75}
+                inactiveRibbonOpacity={0.25}
+                ribbonBorderColor={{
+                    from: 'color',
+                    modifiers: [['darker', 0.6]],
+                }}
+                labelRotation={-90}
+                labelTextColor={{
+                    from: 'color',
+                    modifiers: [['darker', 1]],
+                }}
+                colors={{ scheme: 'nivo' }}
+                motionConfig="stiff"
+            />
         </div>
     );
 }

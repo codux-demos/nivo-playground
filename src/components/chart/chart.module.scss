@@ -1,0 +1,41 @@
+.box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: rgb(230, 64, 39);
+  width: 215px;
+  height: 215px;
+}
+.img {
+  background-repeat: no-repeat;
+  flex: 1 1 0%;
+  background-position: center bottom;
+  background-size: contain;
+  width: 215px;
+}
+
+.text {
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  align-items: center;
+  width: 100%;
+  border-top: 1px solid rgba(242, 80, 56, 0.467);
+  border-bottom: 1px solid rgba(242, 80, 56, 0.467);
+  padding: 7px 0px;
+  font-size: 14px;
+  line-height: 1em;
+}
+.imgContainer {
+  flex: 1 1 0%;
+  background-repeat: no-repeat;
+  background-image: url(/static/circle-packing-f32ddd8….png);
+  background-size: contain;
+  background-position: center bottom;
+  width: 215px;
+  height: 190px;
+}
+.layout {
+}
