@@ -5,7 +5,6 @@ import { ResponsiveLine } from '@nivo/line';
 import { ResponsiveCirclePacking } from '@nivo/circle-packing';
 import { ResponsiveAreaBump, ResponsiveBump } from '@nivo/bump';
 import { ResponsiveBar } from '@nivo/bar';
-import { ResponsiveCalendar } from '@nivo/calendar';
 import { ResponsiveSwarmPlot } from '@nivo/swarmplot';
 import { ResponsiveRadar } from '@nivo/radar';
 import { ResponsiveMarimekko } from '@nivo/marimekko';
@@ -13,6 +12,11 @@ import { ResponsiveRadialBar } from '@nivo/radial-bar';
 import { ResponsiveChoropleth } from '@nivo/geo';
 import { ResponsiveFunnel } from '@nivo/funnel';
 import { ResponsiveBoxPlot } from '@nivo/boxplot';
+import { ResponsiveHeatMap } from '@nivo/heatmap';
+import { ResponsiveNetwork } from '@nivo/network';
+import { ResponsiveSankey } from '@nivo/sankey';
+import { ResponsiveScatterPlot } from '@nivo/scatterplot';
+import { ResponsiveStream } from '@nivo/stream';
 
 export interface NewComponentProps {
     className?: string;
@@ -22742,6 +22746,2143 @@ const data14 = [
         value: 2.39296633353879,
     },
 ];
+
+const data15 = [
+    {
+        id: 'Japan',
+        data: [
+            {
+                x: 'Train',
+                y: 55990,
+            },
+            {
+                x: 'Subway',
+                y: -35765,
+            },
+            {
+                x: 'Bus',
+                y: -55663,
+            },
+            {
+                x: 'Car',
+                y: -1488,
+            },
+            {
+                x: 'Boat',
+                y: -15335,
+            },
+            {
+                x: 'Moto',
+                y: 96943,
+            },
+            {
+                x: 'Moped',
+                y: 55388,
+            },
+            {
+                x: 'Bicycle',
+                y: -93129,
+            },
+            {
+                x: 'Others',
+                y: 23810,
+            },
+        ],
+    },
+    {
+        id: 'France',
+        data: [
+            {
+                x: 'Train',
+                y: -91793,
+            },
+            {
+                x: 'Subway',
+                y: 13203,
+            },
+            {
+                x: 'Bus',
+                y: -74570,
+            },
+            {
+                x: 'Car',
+                y: 84789,
+            },
+            {
+                x: 'Boat',
+                y: -52214,
+            },
+            {
+                x: 'Moto',
+                y: -78768,
+            },
+            {
+                x: 'Moped',
+                y: 77416,
+            },
+            {
+                x: 'Bicycle',
+                y: 44112,
+            },
+            {
+                x: 'Others',
+                y: -27616,
+            },
+        ],
+    },
+    {
+        id: 'US',
+        data: [
+            {
+                x: 'Train',
+                y: -68478,
+            },
+            {
+                x: 'Subway',
+                y: 31499,
+            },
+            {
+                x: 'Bus',
+                y: 25445,
+            },
+            {
+                x: 'Car',
+                y: -85261,
+            },
+            {
+                x: 'Boat',
+                y: -16740,
+            },
+            {
+                x: 'Moto',
+                y: 20595,
+            },
+            {
+                x: 'Moped',
+                y: 64525,
+            },
+            {
+                x: 'Bicycle',
+                y: -55915,
+            },
+            {
+                x: 'Others',
+                y: 18020,
+            },
+        ],
+    },
+    {
+        id: 'Germany',
+        data: [
+            {
+                x: 'Train',
+                y: 88575,
+            },
+            {
+                x: 'Subway',
+                y: 47146,
+            },
+            {
+                x: 'Bus',
+                y: 59347,
+            },
+            {
+                x: 'Car',
+                y: 7234,
+            },
+            {
+                x: 'Boat',
+                y: -76548,
+            },
+            {
+                x: 'Moto',
+                y: 59742,
+            },
+            {
+                x: 'Moped',
+                y: 81188,
+            },
+            {
+                x: 'Bicycle',
+                y: -14126,
+            },
+            {
+                x: 'Others',
+                y: 77104,
+            },
+        ],
+    },
+    {
+        id: 'Norway',
+        data: [
+            {
+                x: 'Train',
+                y: -15731,
+            },
+            {
+                x: 'Subway',
+                y: -98499,
+            },
+            {
+                x: 'Bus',
+                y: -15406,
+            },
+            {
+                x: 'Car',
+                y: 36392,
+            },
+            {
+                x: 'Boat',
+                y: -49051,
+            },
+            {
+                x: 'Moto',
+                y: 34189,
+            },
+            {
+                x: 'Moped',
+                y: -41283,
+            },
+            {
+                x: 'Bicycle',
+                y: -88017,
+            },
+            {
+                x: 'Others',
+                y: 64406,
+            },
+        ],
+    },
+    {
+        id: 'Iceland',
+        data: [
+            {
+                x: 'Train',
+                y: 75590,
+            },
+            {
+                x: 'Subway',
+                y: 72893,
+            },
+            {
+                x: 'Bus',
+                y: -92747,
+            },
+            {
+                x: 'Car',
+                y: 17142,
+            },
+            {
+                x: 'Boat',
+                y: 23359,
+            },
+            {
+                x: 'Moto',
+                y: 52851,
+            },
+            {
+                x: 'Moped',
+                y: 14087,
+            },
+            {
+                x: 'Bicycle',
+                y: -41265,
+            },
+            {
+                x: 'Others',
+                y: -89617,
+            },
+        ],
+    },
+    {
+        id: 'UK',
+        data: [
+            {
+                x: 'Train',
+                y: -28980,
+            },
+            {
+                x: 'Subway',
+                y: -96312,
+            },
+            {
+                x: 'Bus',
+                y: -96340,
+            },
+            {
+                x: 'Car',
+                y: 89614,
+            },
+            {
+                x: 'Boat',
+                y: -50812,
+            },
+            {
+                x: 'Moto',
+                y: -42760,
+            },
+            {
+                x: 'Moped',
+                y: 91966,
+            },
+            {
+                x: 'Bicycle',
+                y: -20668,
+            },
+            {
+                x: 'Others',
+                y: 43808,
+            },
+        ],
+    },
+    {
+        id: 'Vietnam',
+        data: [
+            {
+                x: 'Train',
+                y: -5785,
+            },
+            {
+                x: 'Subway',
+                y: -91088,
+            },
+            {
+                x: 'Bus',
+                y: -9703,
+            },
+            {
+                x: 'Car',
+                y: -72053,
+            },
+            {
+                x: 'Boat',
+                y: -32044,
+            },
+            {
+                x: 'Moto',
+                y: 17260,
+            },
+            {
+                x: 'Moped',
+                y: 38076,
+            },
+            {
+                x: 'Bicycle',
+                y: 57902,
+            },
+            {
+                x: 'Others',
+                y: 55158,
+            },
+        ],
+    },
+];
+
+const data16 = [
+    {
+        statement: "it's good",
+        participation: 16,
+        stronglyAgree: 13,
+        agree: 6,
+        disagree: 28,
+        stronglyDisagree: 14,
+    },
+    {
+        statement: "it's sweet",
+        participation: 32,
+        stronglyAgree: 18,
+        agree: 3,
+        disagree: 22,
+        stronglyDisagree: 22,
+    },
+    {
+        statement: "it's spicy",
+        participation: 25,
+        stronglyAgree: 3,
+        agree: 22,
+        disagree: 3,
+        stronglyDisagree: 20,
+    },
+    {
+        statement: 'worth eating',
+        participation: 20,
+        stronglyAgree: 16,
+        agree: 22,
+        disagree: 18,
+        stronglyDisagree: 7,
+    },
+    {
+        statement: 'worth buying',
+        participation: 4,
+        stronglyAgree: 32,
+        agree: 2,
+        disagree: 12,
+        stronglyDisagree: 31,
+    },
+];
+
+const data17 = {
+    nodes: [
+        {
+            id: 'Node 1',
+            height: 1,
+            size: 24,
+            color: 'rgb(97, 205, 187)',
+        },
+        {
+            id: 'Node 2',
+            height: 1,
+            size: 24,
+            color: 'rgb(97, 205, 187)',
+        },
+        {
+            id: 'Node 3',
+            height: 1,
+            size: 24,
+            color: 'rgb(97, 205, 187)',
+        },
+        {
+            id: 'Node 4',
+            height: 1,
+            size: 24,
+            color: 'rgb(97, 205, 187)',
+        },
+        {
+            id: 'Node 5',
+            height: 1,
+            size: 24,
+            color: 'rgb(97, 205, 187)',
+        },
+        {
+            id: 'Node 6',
+            height: 1,
+            size: 24,
+            color: 'rgb(97, 205, 187)',
+        },
+        {
+            id: 'Node 0',
+            height: 2,
+            size: 32,
+            color: 'rgb(244, 117, 96)',
+        },
+        {
+            id: 'Node 1.0',
+            height: 0,
+            size: 12,
+            color: 'rgb(232, 193, 160)',
+        },
+        {
+            id: 'Node 1.1',
+            height: 0,
+            size: 12,
+            color: 'rgb(232, 193, 160)',
+        },
+        {
+            id: 'Node 1.2',
+            height: 0,
+            size: 12,
+            color: 'rgb(232, 193, 160)',
+        },
+        {
+            id: 'Node 1.3',
+            height: 0,
+            size: 12,
+            color: 'rgb(232, 193, 160)',
+        },
+        {
+            id: 'Node 1.4',
+            height: 0,
+            size: 12,
+            color: 'rgb(232, 193, 160)',
+        },
+        {
+            id: 'Node 1.5',
+            height: 0,
+            size: 12,
+            color: 'rgb(232, 193, 160)',
+        },
+        {
+            id: 'Node 1.6',
+            height: 0,
+            size: 12,
+            color: 'rgb(232, 193, 160)',
+        },
+        {
+            id: 'Node 1.7',
+            height: 0,
+            size: 12,
+            color: 'rgb(232, 193, 160)',
+        },
+        {
+            id: 'Node 2.0',
+            height: 0,
+            size: 12,
+            color: 'rgb(232, 193, 160)',
+        },
+        {
+            id: 'Node 2.1',
+            height: 0,
+            size: 12,
+            color: 'rgb(232, 193, 160)',
+        },
+        {
+            id: 'Node 2.2',
+            height: 0,
+            size: 12,
+            color: 'rgb(232, 193, 160)',
+        },
+        {
+            id: 'Node 2.3',
+            height: 0,
+            size: 12,
+            color: 'rgb(232, 193, 160)',
+        },
+        {
+            id: 'Node 2.4',
+            height: 0,
+            size: 12,
+            color: 'rgb(232, 193, 160)',
+        },
+        {
+            id: 'Node 2.5',
+            height: 0,
+            size: 12,
+            color: 'rgb(232, 193, 160)',
+        },
+        {
+            id: 'Node 2.6',
+            height: 0,
+            size: 12,
+            color: 'rgb(232, 193, 160)',
+        },
+        {
+            id: 'Node 2.7',
+            height: 0,
+            size: 12,
+            color: 'rgb(232, 193, 160)',
+        },
+        {
+            id: 'Node 2.8',
+            height: 0,
+            size: 12,
+            color: 'rgb(232, 193, 160)',
+        },
+        {
+            id: 'Node 3.0',
+            height: 0,
+            size: 12,
+            color: 'rgb(232, 193, 160)',
+        },
+        {
+            id: 'Node 3.1',
+            height: 0,
+            size: 12,
+            color: 'rgb(232, 193, 160)',
+        },
+        {
+            id: 'Node 3.2',
+            height: 0,
+            size: 12,
+            color: 'rgb(232, 193, 160)',
+        },
+        {
+            id: 'Node 3.3',
+            height: 0,
+            size: 12,
+            color: 'rgb(232, 193, 160)',
+        },
+        {
+            id: 'Node 4.0',
+            height: 0,
+            size: 12,
+            color: 'rgb(232, 193, 160)',
+        },
+        {
+            id: 'Node 4.1',
+            height: 0,
+            size: 12,
+            color: 'rgb(232, 193, 160)',
+        },
+        {
+            id: 'Node 4.2',
+            height: 0,
+            size: 12,
+            color: 'rgb(232, 193, 160)',
+        },
+        {
+            id: 'Node 4.3',
+            height: 0,
+            size: 12,
+            color: 'rgb(232, 193, 160)',
+        },
+        {
+            id: 'Node 4.4',
+            height: 0,
+            size: 12,
+            color: 'rgb(232, 193, 160)',
+        },
+        {
+            id: 'Node 4.5',
+            height: 0,
+            size: 12,
+            color: 'rgb(232, 193, 160)',
+        },
+        {
+            id: 'Node 4.6',
+            height: 0,
+            size: 12,
+            color: 'rgb(232, 193, 160)',
+        },
+        {
+            id: 'Node 4.7',
+            height: 0,
+            size: 12,
+            color: 'rgb(232, 193, 160)',
+        },
+        {
+            id: 'Node 5.0',
+            height: 0,
+            size: 12,
+            color: 'rgb(232, 193, 160)',
+        },
+        {
+            id: 'Node 5.1',
+            height: 0,
+            size: 12,
+            color: 'rgb(232, 193, 160)',
+        },
+        {
+            id: 'Node 5.2',
+            height: 0,
+            size: 12,
+            color: 'rgb(232, 193, 160)',
+        },
+        {
+            id: 'Node 5.3',
+            height: 0,
+            size: 12,
+            color: 'rgb(232, 193, 160)',
+        },
+        {
+            id: 'Node 5.4',
+            height: 0,
+            size: 12,
+            color: 'rgb(232, 193, 160)',
+        },
+        {
+            id: 'Node 5.5',
+            height: 0,
+            size: 12,
+            color: 'rgb(232, 193, 160)',
+        },
+        {
+            id: 'Node 5.6',
+            height: 0,
+            size: 12,
+            color: 'rgb(232, 193, 160)',
+        },
+        {
+            id: 'Node 6.0',
+            height: 0,
+            size: 12,
+            color: 'rgb(232, 193, 160)',
+        },
+        {
+            id: 'Node 6.1',
+            height: 0,
+            size: 12,
+            color: 'rgb(232, 193, 160)',
+        },
+        {
+            id: 'Node 6.2',
+            height: 0,
+            size: 12,
+            color: 'rgb(232, 193, 160)',
+        },
+        {
+            id: 'Node 6.3',
+            height: 0,
+            size: 12,
+            color: 'rgb(232, 193, 160)',
+        },
+        {
+            id: 'Node 6.4',
+            height: 0,
+            size: 12,
+            color: 'rgb(232, 193, 160)',
+        },
+        {
+            id: 'Node 6.5',
+            height: 0,
+            size: 12,
+            color: 'rgb(232, 193, 160)',
+        },
+        {
+            id: 'Node 6.6',
+            height: 0,
+            size: 12,
+            color: 'rgb(232, 193, 160)',
+        },
+        {
+            id: 'Node 6.7',
+            height: 0,
+            size: 12,
+            color: 'rgb(232, 193, 160)',
+        },
+        {
+            id: 'Node 6.8',
+            height: 0,
+            size: 12,
+            color: 'rgb(232, 193, 160)',
+        },
+    ],
+    links: [
+        {
+            source: 'Node 0',
+            target: 'Node 1',
+            distance: 80,
+        },
+        {
+            source: 'Node 1',
+            target: 'Node 1.0',
+            distance: 50,
+        },
+        {
+            source: 'Node 1',
+            target: 'Node 1.1',
+            distance: 50,
+        },
+        {
+            source: 'Node 1',
+            target: 'Node 1.2',
+            distance: 50,
+        },
+        {
+            source: 'Node 1',
+            target: 'Node 1.3',
+            distance: 50,
+        },
+        {
+            source: 'Node 1',
+            target: 'Node 1.4',
+            distance: 50,
+        },
+        {
+            source: 'Node 1',
+            target: 'Node 1.5',
+            distance: 50,
+        },
+        {
+            source: 'Node 1',
+            target: 'Node 1.6',
+            distance: 50,
+        },
+        {
+            source: 'Node 1',
+            target: 'Node 1.7',
+            distance: 50,
+        },
+        {
+            source: 'Node 0',
+            target: 'Node 2',
+            distance: 80,
+        },
+        {
+            source: 'Node 2',
+            target: 'Node 2.0',
+            distance: 50,
+        },
+        {
+            source: 'Node 2',
+            target: 'Node 2.1',
+            distance: 50,
+        },
+        {
+            source: 'Node 2',
+            target: 'Node 2.2',
+            distance: 50,
+        },
+        {
+            source: 'Node 2',
+            target: 'Node 2.3',
+            distance: 50,
+        },
+        {
+            source: 'Node 2',
+            target: 'Node 2.4',
+            distance: 50,
+        },
+        {
+            source: 'Node 2',
+            target: 'Node 2.5',
+            distance: 50,
+        },
+        {
+            source: 'Node 2',
+            target: 'Node 2.6',
+            distance: 50,
+        },
+        {
+            source: 'Node 2',
+            target: 'Node 2.7',
+            distance: 50,
+        },
+        {
+            source: 'Node 2',
+            target: 'Node 2.8',
+            distance: 50,
+        },
+        {
+            source: 'Node 0',
+            target: 'Node 3',
+            distance: 80,
+        },
+        {
+            source: 'Node 3',
+            target: 'Node 3.0',
+            distance: 50,
+        },
+        {
+            source: 'Node 3',
+            target: 'Node 3.1',
+            distance: 50,
+        },
+        {
+            source: 'Node 3',
+            target: 'Node 3.2',
+            distance: 50,
+        },
+        {
+            source: 'Node 3',
+            target: 'Node 3.3',
+            distance: 50,
+        },
+        {
+            source: 'Node 0',
+            target: 'Node 4',
+            distance: 80,
+        },
+        {
+            source: 'Node 4',
+            target: 'Node 4.0',
+            distance: 50,
+        },
+        {
+            source: 'Node 4',
+            target: 'Node 4.1',
+            distance: 50,
+        },
+        {
+            source: 'Node 4',
+            target: 'Node 4.2',
+            distance: 50,
+        },
+        {
+            source: 'Node 4',
+            target: 'Node 4.3',
+            distance: 50,
+        },
+        {
+            source: 'Node 4',
+            target: 'Node 4.4',
+            distance: 50,
+        },
+        {
+            source: 'Node 4',
+            target: 'Node 4.5',
+            distance: 50,
+        },
+        {
+            source: 'Node 4',
+            target: 'Node 4.6',
+            distance: 50,
+        },
+        {
+            source: 'Node 4',
+            target: 'Node 4.7',
+            distance: 50,
+        },
+        {
+            source: 'Node 0',
+            target: 'Node 5',
+            distance: 80,
+        },
+        {
+            source: 'Node 5',
+            target: 'Node 5.0',
+            distance: 50,
+        },
+        {
+            source: 'Node 5',
+            target: 'Node 5.1',
+            distance: 50,
+        },
+        {
+            source: 'Node 5',
+            target: 'Node 5.2',
+            distance: 50,
+        },
+        {
+            source: 'Node 5',
+            target: 'Node 5.3',
+            distance: 50,
+        },
+        {
+            source: 'Node 5',
+            target: 'Node 5.4',
+            distance: 50,
+        },
+        {
+            source: 'Node 5',
+            target: 'Node 5.5',
+            distance: 50,
+        },
+        {
+            source: 'Node 5',
+            target: 'Node 5.6',
+            distance: 50,
+        },
+        {
+            source: 'Node 0',
+            target: 'Node 6',
+            distance: 80,
+        },
+        {
+            source: 'Node 6',
+            target: 'Node 6.0',
+            distance: 50,
+        },
+        {
+            source: 'Node 6',
+            target: 'Node 6.1',
+            distance: 50,
+        },
+        {
+            source: 'Node 6',
+            target: 'Node 6.2',
+            distance: 50,
+        },
+        {
+            source: 'Node 6',
+            target: 'Node 6.3',
+            distance: 50,
+        },
+        {
+            source: 'Node 6',
+            target: 'Node 6.4',
+            distance: 50,
+        },
+        {
+            source: 'Node 6',
+            target: 'Node 6.5',
+            distance: 50,
+        },
+        {
+            source: 'Node 6',
+            target: 'Node 6.6',
+            distance: 50,
+        },
+        {
+            source: 'Node 6',
+            target: 'Node 6.7',
+            distance: 50,
+        },
+        {
+            source: 'Node 6',
+            target: 'Node 6.8',
+            distance: 50,
+        },
+    ],
+};
+
+const data18 = {
+    nodes: [
+        {
+            id: 'John',
+            nodeColor: 'hsl(204, 70%, 50%)',
+        },
+        {
+            id: 'Raoul',
+            nodeColor: 'hsl(19, 70%, 50%)',
+        },
+        {
+            id: 'Jane',
+            nodeColor: 'hsl(264, 70%, 50%)',
+        },
+        {
+            id: 'Marcel',
+            nodeColor: 'hsl(306, 70%, 50%)',
+        },
+        {
+            id: 'Ibrahim',
+            nodeColor: 'hsl(155, 70%, 50%)',
+        },
+        {
+            id: 'Junko',
+            nodeColor: 'hsl(345, 70%, 50%)',
+        },
+    ],
+    links: [
+        {
+            source: 'Ibrahim',
+            target: 'Raoul',
+            value: 121,
+        },
+        {
+            source: 'Ibrahim',
+            target: 'Marcel',
+            value: 21,
+        },
+        {
+            source: 'Ibrahim',
+            target: 'Jane',
+            value: 198,
+        },
+        {
+            source: 'Marcel',
+            target: 'John',
+            value: 130,
+        },
+        {
+            source: 'Marcel',
+            target: 'Jane',
+            value: 79,
+        },
+        {
+            source: 'Marcel',
+            target: 'Raoul',
+            value: 124,
+        },
+        {
+            source: 'Marcel',
+            target: 'Junko',
+            value: 50,
+        },
+        {
+            source: 'Raoul',
+            target: 'John',
+            value: 6,
+        },
+        {
+            source: 'Junko',
+            target: 'Raoul',
+            value: 67,
+        },
+        {
+            source: 'Junko',
+            target: 'Jane',
+            value: 69,
+        },
+        {
+            source: 'Jane',
+            target: 'Raoul',
+            value: 100,
+        },
+    ],
+};
+
+const data19 = [
+    {
+        id: 'group A',
+        data: [
+            {
+                x: 76,
+                y: 6,
+            },
+            {
+                x: 94,
+                y: 91,
+            },
+            {
+                x: 41,
+                y: 54,
+            },
+            {
+                x: 72,
+                y: 66,
+            },
+            {
+                x: 57,
+                y: 29,
+            },
+            {
+                x: 88,
+                y: 56,
+            },
+            {
+                x: 66,
+                y: 117,
+            },
+            {
+                x: 34,
+                y: 100,
+            },
+            {
+                x: 42,
+                y: 45,
+            },
+            {
+                x: 70,
+                y: 75,
+            },
+            {
+                x: 35,
+                y: 12,
+            },
+            {
+                x: 0,
+                y: 112,
+            },
+            {
+                x: 71,
+                y: 13,
+            },
+            {
+                x: 96,
+                y: 45,
+            },
+            {
+                x: 87,
+                y: 57,
+            },
+            {
+                x: 94,
+                y: 9,
+            },
+            {
+                x: 84,
+                y: 47,
+            },
+            {
+                x: 25,
+                y: 0,
+            },
+            {
+                x: 72,
+                y: 96,
+            },
+            {
+                x: 17,
+                y: 59,
+            },
+            {
+                x: 10,
+                y: 6,
+            },
+            {
+                x: 61,
+                y: 101,
+            },
+            {
+                x: 49,
+                y: 105,
+            },
+            {
+                x: 6,
+                y: 18,
+            },
+            {
+                x: 88,
+                y: 14,
+            },
+            {
+                x: 96,
+                y: 106,
+            },
+            {
+                x: 75,
+                y: 50,
+            },
+            {
+                x: 52,
+                y: 99,
+            },
+            {
+                x: 91,
+                y: 91,
+            },
+            {
+                x: 10,
+                y: 7,
+            },
+            {
+                x: 59,
+                y: 56,
+            },
+            {
+                x: 55,
+                y: 85,
+            },
+            {
+                x: 80,
+                y: 55,
+            },
+            {
+                x: 62,
+                y: 120,
+            },
+            {
+                x: 92,
+                y: 75,
+            },
+            {
+                x: 0,
+                y: 54,
+            },
+            {
+                x: 65,
+                y: 84,
+            },
+            {
+                x: 92,
+                y: 74,
+            },
+            {
+                x: 59,
+                y: 78,
+            },
+            {
+                x: 81,
+                y: 43,
+            },
+            {
+                x: 15,
+                y: 94,
+            },
+            {
+                x: 52,
+                y: 8,
+            },
+            {
+                x: 31,
+                y: 111,
+            },
+            {
+                x: 3,
+                y: 46,
+            },
+            {
+                x: 52,
+                y: 105,
+            },
+            {
+                x: 62,
+                y: 9,
+            },
+            {
+                x: 68,
+                y: 10,
+            },
+            {
+                x: 80,
+                y: 74,
+            },
+            {
+                x: 79,
+                y: 81,
+            },
+            {
+                x: 23,
+                y: 69,
+            },
+        ],
+    },
+    {
+        id: 'group B',
+        data: [
+            {
+                x: 58,
+                y: 81,
+            },
+            {
+                x: 51,
+                y: 114,
+            },
+            {
+                x: 1,
+                y: 113,
+            },
+            {
+                x: 28,
+                y: 119,
+            },
+            {
+                x: 82,
+                y: 18,
+            },
+            {
+                x: 18,
+                y: 98,
+            },
+            {
+                x: 85,
+                y: 0,
+            },
+            {
+                x: 6,
+                y: 112,
+            },
+            {
+                x: 45,
+                y: 67,
+            },
+            {
+                x: 60,
+                y: 15,
+            },
+            {
+                x: 23,
+                y: 47,
+            },
+            {
+                x: 9,
+                y: 31,
+            },
+            {
+                x: 10,
+                y: 3,
+            },
+            {
+                x: 75,
+                y: 58,
+            },
+            {
+                x: 21,
+                y: 42,
+            },
+            {
+                x: 11,
+                y: 72,
+            },
+            {
+                x: 28,
+                y: 118,
+            },
+            {
+                x: 32,
+                y: 74,
+            },
+            {
+                x: 40,
+                y: 71,
+            },
+            {
+                x: 67,
+                y: 84,
+            },
+            {
+                x: 44,
+                y: 72,
+            },
+            {
+                x: 60,
+                y: 88,
+            },
+            {
+                x: 98,
+                y: 106,
+            },
+            {
+                x: 55,
+                y: 89,
+            },
+            {
+                x: 55,
+                y: 37,
+            },
+            {
+                x: 13,
+                y: 109,
+            },
+            {
+                x: 65,
+                y: 85,
+            },
+            {
+                x: 45,
+                y: 7,
+            },
+            {
+                x: 40,
+                y: 86,
+            },
+            {
+                x: 12,
+                y: 96,
+            },
+            {
+                x: 20,
+                y: 103,
+            },
+            {
+                x: 84,
+                y: 1,
+            },
+            {
+                x: 77,
+                y: 109,
+            },
+            {
+                x: 17,
+                y: 63,
+            },
+            {
+                x: 67,
+                y: 24,
+            },
+            {
+                x: 70,
+                y: 33,
+            },
+            {
+                x: 41,
+                y: 61,
+            },
+            {
+                x: 17,
+                y: 95,
+            },
+            {
+                x: 84,
+                y: 11,
+            },
+            {
+                x: 35,
+                y: 96,
+            },
+            {
+                x: 77,
+                y: 53,
+            },
+            {
+                x: 18,
+                y: 119,
+            },
+            {
+                x: 9,
+                y: 80,
+            },
+            {
+                x: 93,
+                y: 83,
+            },
+            {
+                x: 73,
+                y: 70,
+            },
+            {
+                x: 89,
+                y: 8,
+            },
+            {
+                x: 26,
+                y: 108,
+            },
+            {
+                x: 39,
+                y: 67,
+            },
+            {
+                x: 32,
+                y: 36,
+            },
+            {
+                x: 83,
+                y: 112,
+            },
+        ],
+    },
+    {
+        id: 'group C',
+        data: [
+            {
+                x: 62,
+                y: 48,
+            },
+            {
+                x: 4,
+                y: 24,
+            },
+            {
+                x: 90,
+                y: 40,
+            },
+            {
+                x: 61,
+                y: 115,
+            },
+            {
+                x: 100,
+                y: 104,
+            },
+            {
+                x: 70,
+                y: 92,
+            },
+            {
+                x: 49,
+                y: 53,
+            },
+            {
+                x: 83,
+                y: 102,
+            },
+            {
+                x: 73,
+                y: 30,
+            },
+            {
+                x: 89,
+                y: 58,
+            },
+            {
+                x: 79,
+                y: 16,
+            },
+            {
+                x: 90,
+                y: 46,
+            },
+            {
+                x: 48,
+                y: 48,
+            },
+            {
+                x: 56,
+                y: 64,
+            },
+            {
+                x: 34,
+                y: 55,
+            },
+            {
+                x: 33,
+                y: 100,
+            },
+            {
+                x: 64,
+                y: 7,
+            },
+            {
+                x: 51,
+                y: 10,
+            },
+            {
+                x: 65,
+                y: 105,
+            },
+            {
+                x: 98,
+                y: 68,
+            },
+            {
+                x: 58,
+                y: 21,
+            },
+            {
+                x: 53,
+                y: 59,
+            },
+            {
+                x: 15,
+                y: 52,
+            },
+            {
+                x: 22,
+                y: 2,
+            },
+            {
+                x: 91,
+                y: 47,
+            },
+            {
+                x: 24,
+                y: 26,
+            },
+            {
+                x: 90,
+                y: 52,
+            },
+            {
+                x: 22,
+                y: 108,
+            },
+            {
+                x: 95,
+                y: 95,
+            },
+            {
+                x: 31,
+                y: 110,
+            },
+            {
+                x: 7,
+                y: 112,
+            },
+            {
+                x: 79,
+                y: 32,
+            },
+            {
+                x: 24,
+                y: 36,
+            },
+            {
+                x: 56,
+                y: 7,
+            },
+            {
+                x: 73,
+                y: 64,
+            },
+            {
+                x: 32,
+                y: 114,
+            },
+            {
+                x: 1,
+                y: 80,
+            },
+            {
+                x: 46,
+                y: 22,
+            },
+            {
+                x: 78,
+                y: 117,
+            },
+            {
+                x: 42,
+                y: 32,
+            },
+            {
+                x: 59,
+                y: 105,
+            },
+            {
+                x: 24,
+                y: 28,
+            },
+            {
+                x: 65,
+                y: 77,
+            },
+            {
+                x: 18,
+                y: 111,
+            },
+            {
+                x: 25,
+                y: 87,
+            },
+            {
+                x: 9,
+                y: 20,
+            },
+            {
+                x: 74,
+                y: 18,
+            },
+            {
+                x: 39,
+                y: 116,
+            },
+            {
+                x: 67,
+                y: 79,
+            },
+            {
+                x: 49,
+                y: 106,
+            },
+        ],
+    },
+    {
+        id: 'group D',
+        data: [
+            {
+                x: 23,
+                y: 104,
+            },
+            {
+                x: 60,
+                y: 80,
+            },
+            {
+                x: 89,
+                y: 41,
+            },
+            {
+                x: 93,
+                y: 37,
+            },
+            {
+                x: 43,
+                y: 72,
+            },
+            {
+                x: 12,
+                y: 56,
+            },
+            {
+                x: 66,
+                y: 117,
+            },
+            {
+                x: 96,
+                y: 62,
+            },
+            {
+                x: 62,
+                y: 119,
+            },
+            {
+                x: 74,
+                y: 56,
+            },
+            {
+                x: 40,
+                y: 23,
+            },
+            {
+                x: 15,
+                y: 6,
+            },
+            {
+                x: 75,
+                y: 0,
+            },
+            {
+                x: 86,
+                y: 83,
+            },
+            {
+                x: 86,
+                y: 109,
+            },
+            {
+                x: 89,
+                y: 5,
+            },
+            {
+                x: 80,
+                y: 17,
+            },
+            {
+                x: 26,
+                y: 12,
+            },
+            {
+                x: 5,
+                y: 94,
+            },
+            {
+                x: 86,
+                y: 16,
+            },
+            {
+                x: 55,
+                y: 15,
+            },
+            {
+                x: 28,
+                y: 34,
+            },
+            {
+                x: 36,
+                y: 81,
+            },
+            {
+                x: 22,
+                y: 73,
+            },
+            {
+                x: 46,
+                y: 20,
+            },
+            {
+                x: 37,
+                y: 3,
+            },
+            {
+                x: 58,
+                y: 76,
+            },
+            {
+                x: 31,
+                y: 19,
+            },
+            {
+                x: 95,
+                y: 104,
+            },
+            {
+                x: 95,
+                y: 85,
+            },
+            {
+                x: 49,
+                y: 83,
+            },
+            {
+                x: 14,
+                y: 100,
+            },
+            {
+                x: 92,
+                y: 34,
+            },
+            {
+                x: 89,
+                y: 72,
+            },
+            {
+                x: 88,
+                y: 15,
+            },
+            {
+                x: 65,
+                y: 48,
+            },
+            {
+                x: 89,
+                y: 105,
+            },
+            {
+                x: 20,
+                y: 7,
+            },
+            {
+                x: 47,
+                y: 18,
+            },
+            {
+                x: 70,
+                y: 111,
+            },
+            {
+                x: 75,
+                y: 27,
+            },
+            {
+                x: 56,
+                y: 83,
+            },
+            {
+                x: 45,
+                y: 82,
+            },
+            {
+                x: 71,
+                y: 23,
+            },
+            {
+                x: 46,
+                y: 23,
+            },
+            {
+                x: 8,
+                y: 50,
+            },
+            {
+                x: 42,
+                y: 5,
+            },
+            {
+                x: 13,
+                y: 25,
+            },
+            {
+                x: 71,
+                y: 28,
+            },
+            {
+                x: 60,
+                y: 93,
+            },
+        ],
+    },
+    {
+        id: 'group E',
+        data: [
+            {
+                x: 58,
+                y: 68,
+            },
+            {
+                x: 59,
+                y: 9,
+            },
+            {
+                x: 25,
+                y: 9,
+            },
+            {
+                x: 79,
+                y: 64,
+            },
+            {
+                x: 52,
+                y: 105,
+            },
+            {
+                x: 49,
+                y: 43,
+            },
+            {
+                x: 51,
+                y: 63,
+            },
+            {
+                x: 66,
+                y: 102,
+            },
+            {
+                x: 33,
+                y: 94,
+            },
+            {
+                x: 98,
+                y: 116,
+            },
+            {
+                x: 82,
+                y: 77,
+            },
+            {
+                x: 39,
+                y: 40,
+            },
+            {
+                x: 80,
+                y: 71,
+            },
+            {
+                x: 70,
+                y: 0,
+            },
+            {
+                x: 98,
+                y: 36,
+            },
+            {
+                x: 26,
+                y: 79,
+            },
+            {
+                x: 76,
+                y: 116,
+            },
+            {
+                x: 98,
+                y: 85,
+            },
+            {
+                x: 81,
+                y: 58,
+            },
+            {
+                x: 69,
+                y: 48,
+            },
+            {
+                x: 8,
+                y: 4,
+            },
+            {
+                x: 10,
+                y: 72,
+            },
+            {
+                x: 47,
+                y: 88,
+            },
+            {
+                x: 83,
+                y: 33,
+            },
+            {
+                x: 44,
+                y: 115,
+            },
+            {
+                x: 35,
+                y: 18,
+            },
+            {
+                x: 62,
+                y: 101,
+            },
+            {
+                x: 25,
+                y: 97,
+            },
+            {
+                x: 92,
+                y: 69,
+            },
+            {
+                x: 84,
+                y: 37,
+            },
+            {
+                x: 55,
+                y: 106,
+            },
+            {
+                x: 95,
+                y: 39,
+            },
+            {
+                x: 48,
+                y: 81,
+            },
+            {
+                x: 98,
+                y: 106,
+            },
+            {
+                x: 23,
+                y: 77,
+            },
+            {
+                x: 35,
+                y: 9,
+            },
+            {
+                x: 5,
+                y: 22,
+            },
+            {
+                x: 95,
+                y: 33,
+            },
+            {
+                x: 97,
+                y: 88,
+            },
+            {
+                x: 20,
+                y: 84,
+            },
+            {
+                x: 0,
+                y: 0,
+            },
+            {
+                x: 34,
+                y: 115,
+            },
+            {
+                x: 30,
+                y: 86,
+            },
+            {
+                x: 30,
+                y: 91,
+            },
+            {
+                x: 93,
+                y: 74,
+            },
+            {
+                x: 19,
+                y: 22,
+            },
+            {
+                x: 49,
+                y: 74,
+            },
+            {
+                x: 84,
+                y: 57,
+            },
+            {
+                x: 26,
+                y: 36,
+            },
+            {
+                x: 40,
+                y: 82,
+            },
+        ],
+    },
+];
+
+const data20 = [
+    {
+        Raoul: 41,
+        Josiane: 75,
+        Marcel: 85,
+        René: 149,
+        Paul: 85,
+        Jacques: 36,
+    },
+    {
+        Raoul: 95,
+        Josiane: 72,
+        Marcel: 111,
+        René: 197,
+        Paul: 131,
+        Jacques: 165,
+    },
+    {
+        Raoul: 40,
+        Josiane: 94,
+        Marcel: 162,
+        René: 12,
+        Paul: 160,
+        Jacques: 140,
+    },
+    {
+        Raoul: 58,
+        Josiane: 15,
+        Marcel: 94,
+        René: 128,
+        Paul: 147,
+        Jacques: 86,
+    },
+    {
+        Raoul: 182,
+        Josiane: 156,
+        Marcel: 180,
+        René: 99,
+        Paul: 160,
+        Jacques: 25,
+    },
+    {
+        Raoul: 35,
+        Josiane: 16,
+        Marcel: 74,
+        René: 49,
+        Paul: 168,
+        Jacques: 200,
+    },
+    {
+        Raoul: 135,
+        Josiane: 30,
+        Marcel: 101,
+        René: 139,
+        Paul: 76,
+        Jacques: 128,
+    },
+    {
+        Raoul: 120,
+        Josiane: 178,
+        Marcel: 146,
+        René: 166,
+        Paul: 46,
+        Jacques: 193,
+    },
+    {
+        Raoul: 140,
+        Josiane: 56,
+        Marcel: 81,
+        René: 143,
+        Paul: 113,
+        Jacques: 111,
+    },
+];
 export const NewComponent = ({ className }: NewComponentProps) => {
     return (
         <div className={classNames(styles.root, className)}>
@@ -22789,10 +24930,9 @@ export const NewComponent = ({ className }: NewComponentProps) => {
                         },
                     ]}
                     data={data}
-                    keys={['John', 'Raoul', 'Jane', 'Marcel', 'Ibrahim']}
+                    keys={['R', 'J', 'M', 'I']}
                     activeRibbonOpacity={0.75}
                 />
-                <h6>Heading 6</h6>
             </div>
             <div className={styles['grid-element']}>
                 <ResponsiveLine
@@ -23064,34 +25204,96 @@ export const NewComponent = ({ className }: NewComponentProps) => {
                     ]}
                 />
             </div>
-            <div className={styles['grid-element']}>
-                <h1>Heading 1</h1>
+            <div className={classNames(styles['grid-element'], styles['grid-span3'])}>
+                <h1 className={styles.title}>Heading 1</h1>
             </div>
-            <div className={classNames(styles['grid-element'], styles.prgrp)}>
-                <p>This is a paragraph.</p>
-            </div>
-            <div className={styles['grid-element']} />
             <div className={styles['grid-element']}>
-                <ResponsiveCalendar
-                    data={data6}
-                    from="2022-07-01"
-                    to="2023-02-12"
-                    emptyColor="#eeeeee"
-                    colors={['#61cdbb', '#97e3d5', '#e8c1a0', '#f47560']}
-                    yearSpacing={40}
-                    monthBorderColor="#ffffff"
-                    dayBorderWidth={2}
-                    dayBorderColor="#ffffff"
+                <ResponsiveStream
+                    data={data20}
+                    keys={['Raoul', 'Josiane', 'Marcel', 'René', 'Paul', 'Jacques']}
+                    axisTop={null}
+                    axisRight={null}
+                    axisBottom={{
+                        orient: 'bottom',
+                        tickSize: 5,
+                        tickPadding: 5,
+                        tickRotation: 0,
+                        legend: '',
+                        legendOffset: 36,
+                    }}
+                    axisLeft={{
+                        orient: 'left',
+                        tickSize: 5,
+                        tickPadding: 5,
+                        tickRotation: 0,
+                        legend: '',
+                        legendOffset: -40,
+                    }}
+                    enableGridX={true}
+                    enableGridY={false}
+                    offsetType="silhouette"
+                    colors={{ scheme: 'red_yellow_blue' }}
+                    fillOpacity={0.85}
+                    borderColor={{ theme: 'background' }}
+                    defs={[
+                        {
+                            id: 'dots',
+                            type: 'patternDots',
+                            background: 'inherit',
+                            color: '#2c998f',
+                            size: 4,
+                            padding: 2,
+                            stagger: true,
+                        },
+                        {
+                            id: 'squares',
+                            type: 'patternSquares',
+                            background: 'inherit',
+                            color: '#e4c912',
+                            size: 6,
+                            padding: 2,
+                            stagger: true,
+                        },
+                    ]}
+                    fill={[
+                        {
+                            match: {
+                                id: 'Paul',
+                            },
+                            id: 'dots',
+                        },
+                        {
+                            match: {
+                                id: 'Marcel',
+                            },
+                            id: 'squares',
+                        },
+                    ]}
+                    dotSize={8}
+                    dotColor={{ from: 'color' }}
+                    dotBorderWidth={2}
+                    dotBorderColor={{
+                        from: 'color',
+                        modifiers: [['darker', 0.7]],
+                    }}
                     legends={[
                         {
                             anchor: 'bottom-right',
-                            direction: 'row',
-                            translateY: 36,
-                            itemCount: 4,
-                            itemWidth: 42,
-                            itemHeight: 36,
-                            itemsSpacing: 14,
-                            itemDirection: 'right-to-left',
+                            direction: 'column',
+                            translateX: 100,
+                            itemWidth: 80,
+                            itemHeight: 20,
+                            itemTextColor: '#999999',
+                            symbolSize: 12,
+                            symbolShape: 'circle',
+                            effects: [
+                                {
+                                    on: 'hover',
+                                    style: {
+                                        itemTextColor: '#000000',
+                                    },
+                                },
+                            ],
                         },
                     ]}
                 />
@@ -23262,7 +25464,7 @@ export const NewComponent = ({ className }: NewComponentProps) => {
             <div className={styles['grid-element']}>
                 <ResponsiveBump
                     data={data10}
-                    colors={{ scheme: 'spectral' }}
+                    colors={{ scheme: 'nivo' }}
                     lineWidth={3}
                     activeLineWidth={6}
                     inactiveLineWidth={3}
@@ -23510,7 +25712,7 @@ export const NewComponent = ({ className }: NewComponentProps) => {
                     data={data13}
                     margin={{ top: 20, right: 20, bottom: 20, left: 20 }}
                     valueFormat=">-.4s"
-                    colors={{ scheme: 'spectral' }}
+                    colors={{ scheme: 'nivo' }}
                     borderWidth={20}
                     labelColor={{
                         from: 'color',
@@ -23525,9 +25727,182 @@ export const NewComponent = ({ className }: NewComponentProps) => {
                     motionConfig="wobbly"
                 />
             </div>
-            <div className={styles['grid-element']} />
-            <div className={styles['grid-element']} />
-            <div className={styles['grid-element']} />
+            <div className={styles['grid-element']}>
+                <ResponsiveSankey
+                    data={data18}
+                    align="justify"
+                    colors={{ scheme: 'nivo' }}
+                    nodeOpacity={1}
+                    nodeHoverOthersOpacity={0.35}
+                    nodeThickness={18}
+                    nodeSpacing={24}
+                    nodeBorderWidth={0}
+                    nodeBorderColor={{
+                        from: 'color',
+                        modifiers: [['darker', 0.8]],
+                    }}
+                    nodeBorderRadius={3}
+                    linkOpacity={0.5}
+                    linkHoverOthersOpacity={0.1}
+                    linkContract={3}
+                    enableLinkGradient={true}
+                    labelPosition="outside"
+                    labelOrientation="vertical"
+                    labelPadding={16}
+                    labelTextColor={{
+                        from: 'color',
+                        modifiers: [['darker', 1]],
+                    }}
+                    legends={[
+                        {
+                            anchor: 'bottom-right',
+                            direction: 'column',
+                            translateX: 130,
+                            itemWidth: 100,
+                            itemHeight: 14,
+                            itemDirection: 'right-to-left',
+                            itemsSpacing: 2,
+                            itemTextColor: '#999',
+                            symbolSize: 14,
+                            effects: [
+                                {
+                                    on: 'hover',
+                                    style: {
+                                        itemTextColor: '#000',
+                                    },
+                                },
+                            ],
+                        },
+                    ]}
+                />
+            </div>
+            <div className={styles['grid-element']}>
+                <ResponsiveHeatMap
+                    data={data15}
+                    valueFormat=">-.2s"
+                    axisTop={{
+                        tickSize: 5,
+                        tickPadding: 5,
+                        tickRotation: -90,
+                        legend: '',
+                        legendOffset: 46,
+                    }}
+                    axisRight={{
+                        tickSize: 5,
+                        tickPadding: 5,
+                        tickRotation: 0,
+                        legend: 'country',
+                        legendPosition: 'middle',
+                        legendOffset: 70,
+                    }}
+                    axisLeft={{
+                        tickSize: 5,
+                        tickPadding: 5,
+                        tickRotation: 0,
+                        legend: 'country',
+                        legendPosition: 'middle',
+                        legendOffset: -72,
+                    }}
+                    colors={{
+                        type: 'diverging',
+                        scheme: 'yellow_orange_red',
+                        divergeAt: 0.5,
+                        minValue: -100000,
+                        maxValue: 100000,
+                    }}
+                    emptyColor="#555555"
+                    legends={[
+                        {
+                            anchor: 'bottom',
+                            translateX: 0,
+                            translateY: 30,
+                            length: 400,
+                            thickness: 8,
+                            direction: 'row',
+                            tickPosition: 'after',
+                            tickSize: 3,
+                            tickSpacing: 4,
+                            tickOverlap: false,
+                            tickFormat: '>-.2s',
+                            title: 'Value →',
+                            titleAlign: 'start',
+                            titleOffset: 4,
+                        },
+                    ]}
+                />
+            </div>
+            <div className={styles['grid-element']}>
+                <ResponsiveScatterPlot
+                    data={data19}
+                    xScale={{ type: 'linear', min: 0, max: 'auto' }}
+                    xFormat=">-.2f"
+                    yScale={{ type: 'linear', min: 0, max: 'auto' }}
+                    yFormat=">-.2f"
+                    blendMode="multiply"
+                    axisTop={null}
+                    axisRight={null}
+                    axisBottom={{
+                        orient: 'bottom',
+                        tickSize: 5,
+                        tickPadding: 5,
+                        tickRotation: 0,
+                        legend: 'weight',
+                        legendPosition: 'middle',
+                        legendOffset: 46,
+                    }}
+                    axisLeft={{
+                        orient: 'left',
+                        tickSize: 5,
+                        tickPadding: 5,
+                        tickRotation: 0,
+                        legend: 'size',
+                        legendPosition: 'middle',
+                        legendOffset: -60,
+                    }}
+                    legends={[
+                        {
+                            anchor: 'bottom-right',
+                            direction: 'column',
+                            justify: false,
+                            translateX: 130,
+                            translateY: 0,
+                            itemWidth: 100,
+                            itemHeight: 12,
+                            itemsSpacing: 5,
+                            itemDirection: 'left-to-right',
+                            symbolSize: 12,
+                            symbolShape: 'circle',
+                            effects: [
+                                {
+                                    on: 'hover',
+                                    style: {
+                                        itemOpacity: 1,
+                                    },
+                                },
+                            ],
+                        },
+                    ]}
+                />
+            </div>
+            <div className={styles['grid-element']}>
+                <ResponsiveNetwork
+                    data={data17}
+                    linkDistance={(e) => e.distance}
+                    centeringStrength={0.3}
+                    repulsivity={6}
+                    nodeSize={(n) => n.size}
+                    activeNodeSize={(n) => 1.5 * n.size}
+                    nodeColor={(e) => e.color}
+                    nodeBorderWidth={1}
+                    nodeBorderColor={{
+                        from: 'color',
+                        modifiers: [['darker', 0.8]],
+                    }}
+                    linkThickness={(n) => 2 + 2 * n.target.data.height}
+                    linkBlendMode="multiply"
+                    motionConfig="wobbly"
+                />
+            </div>
         </div>
     );
 };

@@ -6,8 +6,9 @@ export default createBoard({
     Board: () => <NewComponent />,
     isSnippet: true,
     environmentProps: {
-        windowHeight: 681,
-        canvasHeight: 636,
-        windowWidth: 1024,
+        windowWidth: 1128,
+        canvasWidth: 1024,
+        windowHeight: 800,
+        canvasHeight: 800,
     },
 });

@@ -1,20 +1,24 @@
 .root {
-  gap: 10px;
+  gap: 15px;
+  contain: size;
   display: grid;
-  width: 1000px;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-auto-rows: minmax(0, 1fr);
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   align-items: start;
+  padding: 0px;
+  height: 100%;
+  width: 100%;
 }
 .grid-element {
-  width: auto;
-  background-color: #e97878;
-  gap: 20px;
-  display: flex;
-  grid-template-rows: 1fr 1fr 1fr;
-  height: 160px;
-  flex-direction: column;
+  height: 100%;
+  contain: size;
+  background-color: rgba(229, 69, 69, 0);
+
 }
-.prgrp {
-  width: 300px;
+
+.grid-span3 {
+  grid-column: 2 / span 3;
+}
+.title {
+  margin: 0px;
 }
