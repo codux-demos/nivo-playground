@@ -9,13 +9,17 @@
   margin: 10px 20px 20px 0px;
   padding-right: 0px;
 }
-.left-side {
-  width: 350px;
-  height: 100%;
+.bottom {
+  height: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: end;
 }
-.right-side {
-  height: 100%;
-  width: 350px;
+.top {
+  height: 50%;
+  z-index: 2;
+  overflow: hidden;
+  border: 3px solid #ffffff;
 }
 .h1 {
   font-size: 50px;
@@ -26,4 +30,21 @@
   font-size: 16px;
   font-family: Arial, sans-serif;
   font-weight: 100;
+}
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.vertical {
+  flex-direction: column;
+  width: 80%;
+  align-items: end;
+  height: 100%;
+}
+.graphWrapper {
+  animation: rotating 55s linear infinite;
 }
