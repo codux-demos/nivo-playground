@@ -1,10 +1,10 @@
 import classNames from 'classnames';
 import { createBoard } from '@wixc3/react-board';
 import { ResponsiveBump, ResponsiveAreaBump } from '@nivo/bump';
-import styles from './chart.module.scss';
+import styles from './map.module.scss';
 
 export default createBoard({
-    name: 'chart',
+    name: 'map',
     Board: () => (
         <div className={classNames(styles.root)}>
             <div className={styles.text}>
