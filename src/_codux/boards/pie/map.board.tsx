@@ -1,127 +1,238 @@
 import classNames from 'classnames';
 import { createBoard } from '@wixc3/react-board';
-import { ResponsiveBump, ResponsiveAreaBump } from '@nivo/bump';
-import styles from './chart.module.scss';
+import styles from './map.module.scss';
+import { ResponsivePie } from '@nivo/pie';
+import { ResponsiveChord } from '@nivo/chord';
 
+const data4 = [
+    {
+        id: 'stylus',
+        label: 'stylus',
+        value: 72,
+        color: 'hsl(4, 70%, 50%)',
+    },
+    {
+        id: 'css',
+        label: 'css',
+        value: 32,
+        color: 'hsl(326, 70%, 50%)',
+    },
+    {
+        id: 'elixir',
+        label: 'elixir',
+        value: 60,
+        color: 'hsl(145, 70%, 50%)',
+    },
+    {
+        id: 'rust',
+        label: 'rust',
+        value: 55,
+        color: 'hsl(214, 70%, 50%)',
+    },
+    {
+        id: 'hack',
+        label: 'hack',
+        value: 47,
+        color: 'hsl(89, 70%, 50%)',
+    },
+];
+
+const data5 = [
+    [71, 456, 895, 97, 290],
+    [1873, 419, 83, 357, 896],
+    [58, 298, 444, 200, 97],
+    [317, 133, 330, 366, 97],
+    [34, 59, 268, 104, 102],
+];
 export default createBoard({
-    name: 'chart',
+    name: 'pie2',
     Board: () => (
         <div className={classNames(styles.root)}>
             <div className={styles.text}>
-                <h1 className={styles.h1}>Bump Charts</h1>
-                <p className={styles.p}>
-                    <div>
-                        Contrary to popular belief, Lorem Ipsum is not simply random text. It has
-                        roots in a piece of classical Latin literature
+                <h1 className={styles.h1}>Chord &amp; Pie</h1>
+                <p className={styles.p}>Chord and Pie jkfnkd dkwnfkwn dekwnfw wnf 4if</p>
+            </div>
+            <div className={styles.vertical}>
+                <div className={styles['top']}>
+                    <div
+                        style={{ overflow: 'hidden', height: '200%' }}
+                        className={styles.graphWrapper}
+                    >
+                        <ResponsiveChord
+                            data={data5}
+                            keys={['John', 'Raoul', 'Jane', 'Marcel', 'Ibrahim']}
+                            valueFormat=".2f"
+                            padAngle={0.02}
+                            innerRadiusRatio={0.96}
+                            innerRadiusOffset={0.02}
+                            inactiveArcOpacity={0.25}
+                            arcBorderColor={{
+                                from: 'color',
+                                modifiers: [['darker', 0.6]],
+                            }}
+                            activeRibbonOpacity={6}
+                            inactiveRibbonOpacity={0.25}
+                            ribbonBorderColor={{
+                                from: 'color',
+                                modifiers: [['darker', 0.6]],
+                            }}
+                            labelRotation={-90}
+                            labelTextColor={{
+                                from: 'color',
+                                modifiers: [['darker', 1]],
+                            }}
+                            colors={{ scheme: 'paired' }}
+                            motionConfig="stiff"
+                            legends={[
+                                {
+                                    anchor: 'bottom',
+                                    direction: 'row',
+                                    justify: false,
+                                    translateX: 0,
+                                    translateY: 70,
+                                    itemWidth: 80,
+                                    itemHeight: 14,
+                                    itemsSpacing: 0,
+                                    itemTextColor: '#999',
+                                    itemDirection: 'left-to-right',
+                                    symbolSize: 12,
+                                    symbolShape: 'circle',
+                                    effects: [
+                                        {
+                                            on: 'hover',
+                                            style: {
+                                                itemTextColor: '#000',
+                                            },
+                                        },
+                                    ],
+                                },
+                            ]}
+                        />
                     </div>
-                    <div className={styles.p}>1. I wanna know if it ever cross your mind</div>
-                    <div className={styles.p}>2. hjoll dijedbdij s ijnsd. n djn</div>
-                </p>
-            </div>
-            <div className={styles['left-side']}>
-                <div style={{ height: '100%' }}>
-                    <ResponsiveBump
-                        data={data2}
-                        colors={{ scheme: 'blues' }}
-                        lineWidth={3}
-                        activeLineWidth={6}
-                        inactiveLineWidth={3}
-                        inactiveOpacity={0.15}
-                        pointSize={10}
-                        activePointSize={16}
-                        inactivePointSize={0}
-                        pointColor={{ theme: 'background' }}
-                        pointBorderWidth={3}
-                        activePointBorderWidth={3}
-                        pointBorderColor={{ from: 'serie.color' }}
-                        axisTop={{
-                            tickSize: 5,
-                            tickPadding: 5,
-                            tickRotation: 0,
-                            legend: '',
-                            legendPosition: 'middle',
-                            legendOffset: -36,
-                        }}
-                        axisBottom={{
-                            tickSize: 5,
-                            tickPadding: 5,
-                            tickRotation: 0,
-                            legend: '',
-                            legendPosition: 'middle',
-                            legendOffset: 32,
-                        }}
-                        axisLeft={{
-                            tickSize: 5,
-                            tickPadding: 5,
-                            tickRotation: 0,
-                            legend: 'ranking',
-                            legendPosition: 'middle',
-                            legendOffset: -40,
-                        }}
-                        axisRight={null}
-                    />
                 </div>
-            </div>
-            <div className={styles['right-side']}>
-                <div style={{ height: '100%' }}>
-                    <ResponsiveAreaBump
-                        data={data3}
-                        spacing={8}
-                        colors={{ scheme: 'purple_orange' }}
-                        blendMode="multiply"
-                        defs={[
-                            {
-                                id: 'dots',
-                                type: 'patternDots',
-                                background: 'inherit',
-                                color: '#38bcb2',
-                                size: 4,
-                                padding: 1,
-                                stagger: true,
-                            },
-                            {
-                                id: 'lines',
-                                type: 'patternLines',
-                                background: 'inherit',
-                                color: '#eed312',
-                                rotation: -45,
-                                lineWidth: 6,
-                                spacing: 10,
-                            },
-                        ]}
-                        fill={[
-                            {
-                                match: {
-                                    id: 'CoffeeScript',
+                <div className={styles.bottom}>
+                    <div
+                        style={{ height: '200%', zIndex: '1', width: '100%' }}
+                        className={styles.graphWrapper}
+                    >
+                        <ResponsivePie
+                            data={data4}
+                            innerRadius={0.5}
+                            padAngle={0.7}
+                            cornerRadius={3}
+                            activeOuterRadiusOffset={8}
+                            borderWidth={1}
+                            arcLinkLabelsSkipAngle={10}
+                            arcLinkLabelsTextColor="#333333"
+                            arcLinkLabelsThickness={2}
+                            arcLinkLabelsColor={{ from: 'color' }}
+                            arcLabelsSkipAngle={10}
+                            arcLabelsTextColor={{
+                                from: 'color',
+                                modifiers: [['darker', 2]],
+                            }}
+                            defs={[
+                                {
+                                    id: 'dots',
+                                    type: 'patternDots',
+                                    background: 'inherit',
+                                    color: 'rgba(255, 255, 255, 0.3)',
+                                    size: 4,
+                                    padding: 1,
+                                    stagger: true,
                                 },
-                                id: 'dots',
-                            },
-                            {
-                                match: {
-                                    id: 'TypeScript',
+                                {
+                                    id: 'lines',
+                                    type: 'patternLines',
+                                    background: 'inherit',
+                                    color: 'rgba(255, 255, 255, 0.3)',
+                                    rotation: -45,
+                                    lineWidth: 6,
+                                    spacing: 10,
                                 },
-                                id: 'lines',
-                            },
-                        ]}
-                        startLabel="id"
-                        endLabel="id"
-                        axisTop={{
-                            tickSize: 5,
-                            tickPadding: 5,
-                            tickRotation: 0,
-                            legend: '',
-                            legendPosition: 'middle',
-                            legendOffset: -36,
-                        }}
-                        axisBottom={{
-                            tickSize: 5,
-                            tickPadding: 5,
-                            tickRotation: 0,
-                            legend: '',
-                            legendPosition: 'middle',
-                            legendOffset: 32,
-                        }}
-                    />
+                            ]}
+                            fill={[
+                                {
+                                    match: {
+                                        id: 'ruby',
+                                    },
+                                    id: 'dots',
+                                },
+                                {
+                                    match: {
+                                        id: 'c',
+                                    },
+                                    id: 'dots',
+                                },
+                                {
+                                    match: {
+                                        id: 'go',
+                                    },
+                                    id: 'dots',
+                                },
+                                {
+                                    match: {
+                                        id: 'python',
+                                    },
+                                    id: 'dots',
+                                },
+                                {
+                                    match: {
+                                        id: 'scala',
+                                    },
+                                    id: 'lines',
+                                },
+                                {
+                                    match: {
+                                        id: 'lisp',
+                                    },
+                                    id: 'lines',
+                                },
+                                {
+                                    match: {
+                                        id: 'elixir',
+                                    },
+                                    id: 'lines',
+                                },
+                                {
+                                    match: {
+                                        id: 'javascript',
+                                    },
+                                    id: 'lines',
+                                },
+                            ]}
+                            legends={[
+                                {
+                                    anchor: 'bottom',
+                                    direction: 'row',
+                                    justify: false,
+                                    translateX: 0,
+                                    translateY: 56,
+                                    itemsSpacing: 0,
+                                    itemWidth: 100,
+                                    itemHeight: 18,
+                                    itemTextColor: '#999',
+                                    itemDirection: 'left-to-right',
+                                    itemOpacity: 1,
+                                    symbolSize: 18,
+                                    symbolShape: 'circle',
+                                    effects: [
+                                        {
+                                            on: 'hover',
+                                            style: {
+                                                itemTextColor: '#000',
+                                            },
+                                        },
+                                    ],
+                                },
+                            ]}
+                            borderColor={{
+                                from: 'color',
+                                modifiers: [['darker', 0.2]],
+                            }}
+                            colors={{ scheme: 'red_yellow_blue' }}
+                        />
+                    </div>
                 </div>
             </div>
         </div>

@@ -8,31 +8,31 @@ const data4 = [
     {
         id: 'stylus',
         label: 'stylus',
-        value: 76,
+        value: 72,
         color: 'hsl(4, 70%, 50%)',
     },
     {
         id: 'css',
         label: 'css',
-        value: 50,
+        value: 32,
         color: 'hsl(326, 70%, 50%)',
     },
     {
         id: 'elixir',
         label: 'elixir',
-        value: 80,
+        value: 60,
         color: 'hsl(145, 70%, 50%)',
     },
     {
         id: 'rust',
         label: 'rust',
-        value: 35,
+        value: 55,
         color: 'hsl(214, 70%, 50%)',
     },
     {
         id: 'hack',
         label: 'hack',
-        value: 127,
+        value: 47,
         color: 'hsl(89, 70%, 50%)',
     },
 ];
@@ -45,12 +45,22 @@ const data5 = [
     [34, 59, 268, 104, 102],
 ];
 export default createBoard({
-    name: 'map',
+    name: 'pie',
     Board: () => (
         <div className={classNames(styles.root)}>
             <div className={styles.text}>
-                <h1 className={styles.h1}>Bump Charts</h1>
-                <p className={styles.p}>Bump chart jkfnkd dkwnfkwn dekwnfw wnf 4if </p>
+                <h1 className={styles.h1}>Chord &amp; Pie</h1>
+                <p className={styles.p}>
+                    <div>
+                        If you are going to use a passage of Lorem Ipsum, you need to be sure there
+                        isn&apos;t anything
+                    </div>
+                    <div className={styles.p}>1. Chord same old song </div>
+                    <div className={styles.p}>2. Pie dkwnfk wufid ksmdk</div>
+                    <div className={styles.p}>
+                        3. Dust in the wind all we are is dust in the wind
+                    </div>
+                </p>
             </div>
             <div className={styles.vertical}>
                 <div className={styles['top']}>
