@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import { createBoard } from '@wixc3/react-board';
-import styles from './chart.module.scss';
+import styles from './swarm.module.scss';
 import { ResponsiveScatterPlot } from '@nivo/scatterplot';
 import { ResponsiveSwarmPlot } from '@nivo/swarmplot';
 
@@ -2432,7 +2432,7 @@ const data7 = [
     },
 ];
 export default createBoard({
-    name: 'chart 22',
+    name: 'swarm',
     Board: () => (
         <div className={classNames(styles.root)}>
             <div className={styles.text}>
