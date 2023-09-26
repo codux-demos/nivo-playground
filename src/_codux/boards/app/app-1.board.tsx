@@ -2,10 +2,7 @@ import { createBoard } from '@wixc3/react-board';
 import { App } from '../../../App';
 
 export default createBoard({
-    name: 'App',
+    name: 'App 1',
     Board: () => <App />,
-    environmentProps: {
-        canvasWidth: 1024,
-        canvasHeight: 640
-    },
+    isSnippet: true,
 });
