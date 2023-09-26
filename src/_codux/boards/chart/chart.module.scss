@@ -1,32 +1,38 @@
 .root {
-  display: flex;
-  width: 900px;
-  height: 100%;
+    display: flex;
+    width: 900px;
+    height: 100%;
 }
+
 .text {
-  height: 100%;
-  width: 190px;
-  margin: 10px 20px 20px 0px;
-  padding-right: 0px;
+    height: 100%;
+    width: 190px;
+    margin: 10px 20px 20px 0px;
+    padding-right: 0px;
 }
+
 .left-side {
-  width: 350px;
-  height: 100%;
+    width: 350px;
+    height: 100%;
 }
+
 .right-side {
-  height: 100%;
-  width: 350px;
+    height: 100%;
+    width: 350px;
 }
+
 .h1 {
-  font-size: 50px;
-  font-weight: 500;
-  font-family: Didot, serif;
+    font-size: 50px;
+    font-weight: 500;
+    font-family: Didot, serif;
 }
+
 .p {
-  font-size: 16px;
-  font-family: Arial, sans-serif;
-  font-weight: 100;
-  row-gap: 0px;
-  margin-bottom: 0px;
-  margin-top: 20px;
+    font-size: 14.5px;
+    font-family: Arial, sans-serif;
+    font-weight: 100;
+    row-gap: 0px;
+    margin-bottom: 0px;
+    margin-top: 20px;
+    line-height: 20px;
 }

@@ -51,16 +51,9 @@ export default createBoard({
             <div className={styles.text}>
                 <h1 className={styles.h1}>Chord &amp; Pie</h1>
                 <p className={styles.p}>
-                    <div>
-                        If you are going to use a passage of Lorem Ipsum, you need to be sure there
-                        isn&apos;t anything
-                    </div>
-                    <div className={styles.p}>1. Chord same old song </div>
-                    <div className={styles.p}>2. Pie dkwnfk wufid ksmdk</div>
-                    <div className={styles.p}>
-                        3. Dust in the wind all we are is dust in the wind
-                    </div>
-                </p>
+                    <div>Circular diagrams and radial charts showing entity relationships and category proportions.</div>
+                    <div className={styles.p}>1. Line interpolations customize the appearance of curves.</div>
+                    <div className={styles.p}>2. Labels, points, and customizable colors, sizes, and opacities show data in meaningful ways.</div></p>
             </div>
             <div className={styles.vertical}>
                 <div className={styles['top']}>

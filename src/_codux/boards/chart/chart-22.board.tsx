@@ -2438,11 +2438,9 @@ export default createBoard({
             <div className={styles.text}>
                 <h1 className={styles.h1}>Swarm</h1>
                 <p className={styles.p}>
-                    <div>Swarm plot and Scatter plot jkfnkd dkwnfkwn dekwnfw wnf 4if</div>
-                    <div className={styles.p}>1. Something about this table that is uniq</div>
-                    <div className={styles.p}>2. About the shapes</div>
-                    <div className={styles.p}>3. What people are doing in new years god</div>
-                </p>
+                    <div>Scatter plot showing multi-dimensional data using circles of different sizes and colors.</div>
+                    <div className={styles.p}>1. Shows distribution and density of data points within each group or category.</div>
+                    <div className={styles.p}>2. Avoid overlapping of data points by using a force simulation that creates a gap between them.</div></p>
             </div>
             <div className={styles['left-side']}>
                 <div style={{ height: '100%' }}>

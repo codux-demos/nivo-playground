@@ -10,12 +10,9 @@ export default createBoard({
             <div className={styles.text}>
                 <h1 className={styles.h1}>Bump Charts</h1>
                 <p className={styles.p}>
-                    <div>
-                        Contrary to popular belief, Lorem Ipsum is not simply random text. It has
-                        roots in a piece of classical Latin literature
-                    </div>
-                    <div className={styles.p}>1. I wanna know if it ever cross your mind</div>
-                    <div className={styles.p}>2. hjoll dijedbdij s ijnsd. n djn</div>
+                    <div>Cool charts that show the ranking of series over time.</div>
+                    <div className={styles.p}>1. Support different line interpolations, smooth or linear, to customize the appearance of curves.</div>
+                    <div className={styles.p}>2. Add labels and points to a series start and end, with color, size, and opacity.</div>
                 </p>
             </div>
             <div className={styles['left-side']}>
