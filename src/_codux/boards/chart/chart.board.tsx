@@ -19,111 +19,105 @@ export default createBoard({
                 </p>
             </div>
             <div className={styles['left-side']}>
-                <div style={{ height: '100%' }}>
-                    <ResponsiveBump
-                        data={data2}
-                        colors={{ scheme: 'blues' }}
-                        lineWidth={3}
-                        activeLineWidth={6}
-                        inactiveLineWidth={3}
-                        inactiveOpacity={0.15}
-                        pointSize={10}
-                        activePointSize={16}
-                        inactivePointSize={0}
-                        pointColor={{ theme: 'background' }}
-                        pointBorderWidth={3}
-                        activePointBorderWidth={3}
-                        pointBorderColor={{ from: 'serie.color' }}
-                        axisTop={{
-                            tickSize: 5,
-                            tickPadding: 5,
-                            tickRotation: 0,
-                            legend: '',
-                            legendPosition: 'middle',
-                            legendOffset: -36,
-                        }}
-                        axisBottom={{
-                            tickSize: 5,
-                            tickPadding: 5,
-                            tickRotation: 0,
-                            legend: '',
-                            legendPosition: 'middle',
-                            legendOffset: 32,
-                        }}
-                        axisLeft={{
-                            tickSize: 5,
-                            tickPadding: 5,
-                            tickRotation: 0,
-                            legend: 'ranking',
-                            legendPosition: 'middle',
-                            legendOffset: -40,
-                        }}
-                        axisRight={null}
-                    />
-                </div>
-            </div>
+                <ResponsiveBump
+                    data={data2}
+                    colors={{ scheme: 'blues' }}
+                    lineWidth={3}
+                    activeLineWidth={6}
+                    inactiveLineWidth={3}
+                    inactiveOpacity={0.15}
+                    pointSize={10}
+                    activePointSize={16}
+                    inactivePointSize={0}
+                    pointColor={{ theme: 'background' }}
+                    pointBorderWidth={3}
+                    activePointBorderWidth={3}
+                    pointBorderColor={{ from: 'serie.color' }}
+                    axisTop={{
+                        tickSize: 5,
+                        tickPadding: 5,
+                        tickRotation: 0,
+                        legend: '',
+                        legendPosition: 'middle',
+                        legendOffset: -36,
+                    }}
+                    axisBottom={{
+                        tickSize: 5,
+                        tickPadding: 5,
+                        tickRotation: 0,
+                        legend: '',
+                        legendPosition: 'middle',
+                        legendOffset: 32,
+                    }}
+                    axisLeft={{
+                        tickSize: 5,
+                        tickPadding: 5,
+                        tickRotation: 0,
+                        legend: 'ranking',
+                        legendPosition: 'middle',
+                        legendOffset: -40,
+                    }}
+                    axisRight={null}
+                /></div>
             <div className={styles['right-side']}>
-                <div style={{ height: '100%' }}>
-                    <ResponsiveAreaBump
-                        data={data3}
-                        spacing={8}
-                        colors={{ scheme: 'purple_orange' }}
-                        blendMode="multiply"
-                        defs={[
-                            {
-                                id: 'dots',
-                                type: 'patternDots',
-                                background: 'inherit',
-                                color: '#38bcb2',
-                                size: 4,
-                                padding: 1,
-                                stagger: true,
+                <ResponsiveAreaBump
+                    data={data3}
+                    spacing={8}
+                    colors={{ scheme: 'purple_orange' }}
+                    blendMode="multiply"
+                    defs={[
+                        {
+                            id: 'dots',
+                            type: 'patternDots',
+                            background: 'inherit',
+                            color: '#38bcb2',
+                            size: 4,
+                            padding: 1,
+                            stagger: true,
+                        },
+                        {
+                            id: 'lines',
+                            type: 'patternLines',
+                            background: 'inherit',
+                            color: '#eed312',
+                            rotation: -45,
+                            lineWidth: 6,
+                            spacing: 10,
+                        },
+                    ]}
+                    fill={[
+                        {
+                            match: {
+                                id: 'CoffeeScript',
                             },
-                            {
-                                id: 'lines',
-                                type: 'patternLines',
-                                background: 'inherit',
-                                color: '#eed312',
-                                rotation: -45,
-                                lineWidth: 6,
-                                spacing: 10,
+                            id: 'dots',
+                        },
+                        {
+                            match: {
+                                id: 'TypeScript',
                             },
-                        ]}
-                        fill={[
-                            {
-                                match: {
-                                    id: 'CoffeeScript',
-                                },
-                                id: 'dots',
-                            },
-                            {
-                                match: {
-                                    id: 'TypeScript',
-                                },
-                                id: 'lines',
-                            },
-                        ]}
-                        startLabel="id"
-                        endLabel="id"
-                        axisTop={{
-                            tickSize: 5,
-                            tickPadding: 5,
-                            tickRotation: 0,
-                            legend: '',
-                            legendPosition: 'middle',
-                            legendOffset: -36,
-                        }}
-                        axisBottom={{
-                            tickSize: 5,
-                            tickPadding: 5,
-                            tickRotation: 0,
-                            legend: '',
-                            legendPosition: 'middle',
-                            legendOffset: 32,
-                        }}
-                    />
-                </div>
-            </div>
+                            id: 'lines',
+                        },
+                    ]}
+                    startLabel="id"
+                    endLabel="id"
+                    axisTop={{
+                        tickSize: 5,
+                        tickPadding: 5,
+                        tickRotation: 0,
+                        legend: '',
+                        legendPosition: 'middle',
+                        legendOffset: -36,
+                    }}
+                    axisBottom={{
+                        tickSize: 5,
+                        tickPadding: 5,
+                        tickRotation: 0,
+                        legend: '',
+                        legendPosition: 'middle',
+                        legendOffset: 32,
+                    }}
+                /></div>
         </div>
     ),
     isSnippet: true,

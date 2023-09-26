@@ -62,12 +62,13 @@ export default createBoard({
                     </div>
                 </p>
             </div>
-            <div className={styles.vertical}>
+            <div className={styles.}>
                 <div className={styles['top']}>
                     <div
                         style={{ overflow: 'hidden', height: '200%' }}
                         className={styles.graphWrapper}
                     >
+
                         <ResponsiveChord
                             data={data5}
                             keys={['John', 'Raoul', 'Jane', 'Marcel', 'Ibrahim']}
