@@ -3,6 +3,7 @@ import { createBoard } from '@wixc3/react-board';
 import styles from './swarm.module.scss';
 import { ResponsiveScatterPlot } from '@nivo/scatterplot';
 import { ResponsiveSwarmPlot } from '@nivo/swarmplot';
+import { getSchemeByIndex } from '../../helpers';
 
 const data4 = {
     nodes: [
@@ -2431,10 +2432,16 @@ const data7 = [
         volume: 8,
     },
 ];
+
+
+const swarmScheme = getSchemeByIndex(0) 
+const scatterScheme = getSchemeByIndex(0)
+
 export default createBoard({
     name: 'swarm',
     Board: () => (
         <div className={classNames(styles.root)}>
+            <div style={{color: 'gold', position: 'fixed'}}>{swarmScheme}, {scatterScheme}</div>
             <div className={styles.text}>
                 <h1 className={styles.h1}>Swarm</h1>
                 <p className={styles.p}>
@@ -2503,12 +2510,14 @@ export default createBoard({
                             legendPosition: 'middle',
                             legendOffset: -76,
                         }}
+                        colors={{scheme: swarmScheme}}
                     />
                 </div>
             </div>
             <div className={styles['right-side']}>
                 <div style={{ height: '100%' }}>
                     <ResponsiveScatterPlot
+                        colors={{scheme: scatterScheme}}
                         data={data5}
                         xScale={{ type: 'linear', min: 0, max: 'auto' }}
                         xFormat=">-.2f"

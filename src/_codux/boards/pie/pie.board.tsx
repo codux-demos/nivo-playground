@@ -3,8 +3,9 @@ import { createBoard } from '@wixc3/react-board';
 import styles from './map.module.scss';
 import { ResponsivePie } from '@nivo/pie';
 import { ResponsiveChord } from '@nivo/chord';
+import { getSchemeByIndex } from '../../helpers';
 
-const data4 = [
+const pieData = [
     {
         id: 'stylus',
         label: 'stylus',
@@ -37,17 +38,22 @@ const data4 = [
     },
 ];
 
-const data5 = [
+const chordData = [
     [71, 456, 895, 97, 290],
     [1873, 419, 83, 357, 896],
     [58, 298, 444, 200, 97],
     [317, 133, 330, 366, 97],
     [34, 59, 268, 104, 102],
 ];
+
+const pieScheme = getSchemeByIndex(0) 
+const chordScheme = getSchemeByIndex(0)
+
 export default createBoard({
     name: 'pie',
     Board: () => (
         <div className={classNames(styles.root)}>
+            <div style={{color: 'gold', position: 'fixed'}}>{chordScheme}, {pieScheme}</div>
             <div className={styles.text}>
                 <h1 className={styles.h1}>Chord &amp; Pie</h1>
                 <p className={styles.p}>
@@ -62,7 +68,7 @@ export default createBoard({
                     </div>
                 </p>
             </div>
-            <div className={styles.}>
+            <div className={styles['vertical']}>
                 <div className={styles['top']}>
                     <div
                         style={{ overflow: 'hidden', height: '200%' }}
@@ -70,7 +76,7 @@ export default createBoard({
                     >
 
                         <ResponsiveChord
-                            data={data5}
+                            data={chordData}
                             keys={['John', 'Raoul', 'Jane', 'Marcel', 'Ibrahim']}
                             valueFormat=".2f"
                             padAngle={0.02}
@@ -92,7 +98,7 @@ export default createBoard({
                                 from: 'color',
                                 modifiers: [['darker', 1]],
                             }}
-                            colors={{ scheme: 'paired' }}
+                            colors={{ scheme: chordScheme }}
                             motionConfig="stiff"
                             legends={[
                                 {
@@ -127,7 +133,7 @@ export default createBoard({
                         className={styles.graphWrapper}
                     >
                         <ResponsivePie
-                            data={data4}
+                            data={pieData}
                             innerRadius={0.5}
                             padAngle={0.7}
                             cornerRadius={3}
@@ -241,7 +247,7 @@ export default createBoard({
                                 from: 'color',
                                 modifiers: [['darker', 0.2]],
                             }}
-                            colors={{ scheme: 'red_yellow_blue' }}
+                            colors={{ scheme: pieScheme }}
                         />
                     </div>
                 </div>

@@ -35,6 +35,7 @@
     "@nivo/treemap": "^0.83.0",
     "@nivo/voronoi": "^0.83.0",
     "@nivo/waffle": "^0.83.0",
+    "@wixc3/react-board": "^2.3.0",
     "classnames": "^2.3.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -45,7 +46,6 @@
     "@types/react": "^18.2.21",
     "@types/react-dom": "^18.2.7",
     "@vitejs/plugin-react": "^4.0.4",
-    "@wixc3/react-board": "^2.3.0",
     "sass": "^1.66.1",
     "typescript": "^5.2.2",
     "vite": "^4.4.9"
