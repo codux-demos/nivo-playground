@@ -1885,7 +1885,7 @@ const lineScheme = getSchemeByIndex(24);
 
 export const App = () => (
     <div className={styles.root}>
-        <div style={{ color: 'gold', position: 'fixed' }}>
+        <div style={{ color: 'none', position: 'fixed' }}>
             {boxPlotScheme}, {lineScheme}
         </div>
         <div className={styles.title}>
