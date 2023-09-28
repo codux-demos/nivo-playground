@@ -2433,22 +2433,32 @@ const data7 = [
     },
 ];
 
-
-const swarmScheme = getSchemeByIndex(1) 
-const scatterScheme = getSchemeByIndex(1)
+const swarmScheme = getSchemeByIndex(1);
+const scatterScheme = getSchemeByIndex(1);
 
 export default createBoard({
     name: 'swarm',
     Board: () => (
         <div className={classNames(styles.root)}>
-            <div style={{color: 'gold', position: 'fixed'}}>{swarmScheme}, {scatterScheme}</div>
+            <div style={{ color: 'gold', position: 'fixed' }}>
+                {swarmScheme}, {scatterScheme}
+            </div>
             <div className={styles.text}>
                 <h1 className={styles.h1}>Swarm</h1>
                 <p className={styles.p}>
-                    <div>Swarm plot and Scatter plot jkfnkd dkwnfkwn dekwnfw wnf 4if</div>
-                    <div className={styles.p}>1. Something about this table that is uniq</div>
-                    <div className={styles.p}>2. About the shapes</div>
-                    <div className={styles.p}>3. What people are doing in new years god</div>
+                    <div>
+                        Scatter plot showing multi-dimensional data using circles of different sizes
+                        and colors.{' '}
+                    </div>
+                    <div className={styles.p}>
+                        1. Shows distribution and density of data points within each group or
+                        category.
+                    </div>
+                    <div className={styles.p}>
+                        2. Avoid overlapping of data points by using a force simulation that creates
+                        a gap between them.
+                    </div>
+                    <div className={styles.p}></div>
                 </p>
             </div>
             <div className={styles['left-side']}>
@@ -2510,14 +2520,14 @@ export default createBoard({
                             legendPosition: 'middle',
                             legendOffset: -76,
                         }}
-                        colors={{scheme: swarmScheme}}
+                        colors={{ scheme: swarmScheme }}
                     />
                 </div>
             </div>
             <div className={styles['right-side']}>
                 <div style={{ height: '100%' }}>
                     <ResponsiveScatterPlot
-                        colors={{scheme: scatterScheme}}
+                        colors={{ scheme: scatterScheme }}
                         data={data5}
                         xScale={{ type: 'linear', min: 0, max: 'auto' }}
                         xFormat=">-.2f"
