@@ -455,14 +455,14 @@ const areaBumpData = [
     },
 ];
 
-const bumpScheme = getSchemeByIndex(1);
-const areaBumpScheme = getSchemeByIndex(0);
+const bumpScheme = getSchemeByIndex(14);
+const areaBumpScheme = getSchemeByIndex(14);
 
 export default createBoard({
     name: 'chart',
     Board: () => (
         <div className={classNames(styles.root)}>
-            <div style={{ color: 'gold', position: 'fixed' }}>
+            <div style={{ color: 'black', position: 'fixed' }}>
                 {bumpScheme}, {areaBumpScheme}
             </div>
             <div className={styles.text}>
@@ -484,7 +484,7 @@ export default createBoard({
             <div className={styles['left-side']}>
                 <ResponsiveBump
                     data={bumpData}
-                    colors={{ scheme: bumpScheme }}
+                    colors={{ scheme: 'purple_orange' }}
                     lineWidth={3}
                     activeLineWidth={6}
                     inactiveLineWidth={3}
@@ -527,7 +527,7 @@ export default createBoard({
                 <ResponsiveAreaBump
                     data={areaBumpData}
                     spacing={8}
-                    colors={{ scheme: areaBumpScheme }}
+                    colors={{ scheme: 'purpleRed_green' }}
                     blendMode="multiply"
                     defs={[
                         {

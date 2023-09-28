@@ -46,16 +46,13 @@ const chordData = [
     [34, 59, 268, 104, 102],
 ];
 
-const chordScheme = getSchemeByIndex(19);
-const pieScheme = getSchemeByIndex(19);
+// const chordScheme = getSchemeByIndex(5);
+// const pieScheme = getSchemeByIndex(16);
 
 export default createBoard({
     name: 'pie',
     Board: () => (
         <div className={classNames(styles.root)}>
-            <div style={{ color: 'black', position: 'fixed' }}>
-                {chordScheme}, {pieScheme}
-            </div>
             <div className={styles.text}>
                 <h1 className={styles.h1}>Chord &amp; Pie</h1>
                 <p className={styles.p}>
@@ -101,7 +98,7 @@ export default createBoard({
                                 from: 'color',
                                 modifiers: [['darker', 1]],
                             }}
-                            colors={{ scheme: chordScheme }}
+                            colors={{ scheme: 'paired' }}
                             motionConfig="stiff"
                             legends={[
                                 {
@@ -250,7 +247,7 @@ export default createBoard({
                                 from: 'color',
                                 modifiers: [['darker', 0.2]],
                             }}
-                            colors={{ scheme: pieScheme }}
+                            colors={{ scheme: 'red_grey' }}
                         />
                     </div>
                 </div>

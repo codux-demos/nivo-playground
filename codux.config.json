@@ -5,6 +5,7 @@
     "include": ["src/**"],
     "exclude": ["src/_codux/component-templates/**"]
   },
+  "conditionalRenderers": ["ResponsiveChord"],
   "newComponent": {
     "componentsPath": "src/components",
     "templatesPath": "src/_codux/component-templates"
