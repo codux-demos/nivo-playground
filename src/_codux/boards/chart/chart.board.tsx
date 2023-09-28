@@ -455,19 +455,20 @@ const areaBumpData = [
     },
 ];
 
-const bumpScheme = getSchemeByIndex(1)
-const areaBumpScheme = getSchemeByIndex(0)
-
+const bumpScheme = getSchemeByIndex(1);
+const areaBumpScheme = getSchemeByIndex(0);
 
 export default createBoard({
     name: 'chart',
     Board: () => (
         <div className={classNames(styles.root)}>
-            <div style={{color: 'gold', position: 'fixed'}}>{bumpScheme}, {areaBumpScheme}</div>
+            <div style={{ color: 'gold', position: 'fixed' }}>
+                {bumpScheme}, {areaBumpScheme}
+            </div>
             <div className={styles.text}>
                 <h1 className={styles.h1}>Bump Charts</h1>
                 <p className={styles.p}>
-                    <div>
+                    <div className={styles.p}>
                         Contrary to popular belief, Lorem Ipsum is not simply random text. It has
                         roots in a piece of classical Latin literature
                     </div>
@@ -515,7 +516,8 @@ export default createBoard({
                         legendOffset: -40,
                     }}
                     axisRight={null}
-                /></div>
+                />
+            </div>
             <div className={styles['right-side']}>
                 <ResponsiveAreaBump
                     data={areaBumpData}
@@ -574,7 +576,8 @@ export default createBoard({
                         legendPosition: 'middle',
                         legendOffset: 32,
                     }}
-                /></div>
+                />
+            </div>
         </div>
     ),
     isSnippet: true,
@@ -582,5 +585,3 @@ export default createBoard({
         canvasHeight: 500,
     },
 });
-
-
