@@ -2433,22 +2433,19 @@ const data7 = [
     },
 ];
 
-const swarmScheme = getSchemeByIndex(1);
-const scatterScheme = getSchemeByIndex(1);
+// const swarmScheme = getSchemeByIndex(1);
+// const scatterScheme = getSchemeByIndex(1);
 
 export default createBoard({
     name: 'swarm',
     Board: () => (
         <div className={classNames(styles.root)}>
-            <div style={{ color: 'gold', position: 'fixed' }}>
-                {swarmScheme}, {scatterScheme}
-            </div>
             <div className={styles.text}>
                 <h1 className={styles.h1}>Swarm</h1>
                 <p>
                     <div className={styles.p}>
                         Scatter plot showing multi-dimensional data using circles of different sizes
-                        and colors.{' '}
+                        and colors.
                     </div>
                     <div className={styles.p}>
                         1. Shows distribution and density of data points within each group or
@@ -2520,14 +2517,14 @@ export default createBoard({
                             legendPosition: 'middle',
                             legendOffset: -76,
                         }}
-                        colors={{ scheme: swarmScheme }}
+                        colors={{ scheme: 'nivo' }}
                     />
                 </div>
             </div>
             <div className={styles['right-side']}>
                 <div style={{ height: '100%' }}>
                     <ResponsiveScatterPlot
-                        colors={{ scheme: scatterScheme }}
+                        colors={{ scheme: 'nivo' }}
                         data={data5}
                         xScale={{ type: 'linear', min: 0, max: 'auto' }}
                         xFormat=">-.2f"
@@ -2585,6 +2582,7 @@ export default createBoard({
     isSnippet: true,
     environmentProps: {
         canvasHeight: 500,
+        windowWidth: 1024,
     },
 });
 

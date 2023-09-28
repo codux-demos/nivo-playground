@@ -46,25 +46,29 @@ const chordData = [
     [34, 59, 268, 104, 102],
 ];
 
-const pieScheme = getSchemeByIndex(0) 
-const chordScheme = getSchemeByIndex(0)
+const chordScheme = getSchemeByIndex(19);
+const pieScheme = getSchemeByIndex(19);
 
 export default createBoard({
     name: 'pie',
     Board: () => (
         <div className={classNames(styles.root)}>
-            <div style={{color: 'gold', position: 'fixed'}}>{chordScheme}, {pieScheme}</div>
+            <div style={{ color: 'black', position: 'fixed' }}>
+                {chordScheme}, {pieScheme}
+            </div>
             <div className={styles.text}>
                 <h1 className={styles.h1}>Chord &amp; Pie</h1>
                 <p className={styles.p}>
                     <div>
-                        If you are going to use a passage of Lorem Ipsum, you need to be sure there
-                        isn&apos;t anything
+                        Circular diagrams and radial charts showing entity relationships and
+                        category proportions.
                     </div>
-                    <div className={styles.p}>1. Chord same old song </div>
-                    <div className={styles.p}>2. Pie dkwnfk wufid ksmdk</div>
                     <div className={styles.p}>
-                        3. Dust in the wind all we are is dust in the wind
+                        1. Line interpolations customize the appearance of curves.
+                    </div>
+                    <div className={styles.p}>
+                        2. Labels, points, and customizable colors, sizes, and opacities show data
+                        in meaningful ways.
                     </div>
                 </p>
             </div>
@@ -74,7 +78,6 @@ export default createBoard({
                         style={{ overflow: 'hidden', height: '200%' }}
                         className={styles.graphWrapper}
                     >
-
                         <ResponsiveChord
                             data={chordData}
                             keys={['John', 'Raoul', 'Jane', 'Marcel', 'Ibrahim']}
