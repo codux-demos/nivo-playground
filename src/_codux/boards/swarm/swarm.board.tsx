@@ -2434,8 +2434,8 @@ const data7 = [
 ];
 
 
-const swarmScheme = getSchemeByIndex(0) 
-const scatterScheme = getSchemeByIndex(0)
+const swarmScheme = getSchemeByIndex(1) 
+const scatterScheme = getSchemeByIndex(1)
 
 export default createBoard({
     name: 'swarm',
