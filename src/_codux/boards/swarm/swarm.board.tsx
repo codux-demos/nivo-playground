@@ -2445,8 +2445,8 @@ export default createBoard({
             </div>
             <div className={styles.text}>
                 <h1 className={styles.h1}>Swarm</h1>
-                <p className={styles.p}>
-                    <div>
+                <p>
+                    <div className={styles.p}>
                         Scatter plot showing multi-dimensional data using circles of different sizes
                         and colors.{' '}
                     </div>
